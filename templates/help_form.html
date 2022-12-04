@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% block body %}
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0">Account</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                        <li class="breadcrumb-item active">Add Account</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="col-md-auto" style="margin: 10px;">
+                    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+                    <div class="alert alert-success alert-dismissable" role="alert" id="inside_alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="close">&nbsp;<span aria-hidden="true">x</span></button>
+                        {{message}}
+                    </div>
+                    {% endfor %} {% endif %} {% endwith %}
+                </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card mt-4">
+
+                            <div class="card-body p-4">
+                                <div class="text-center mt-2">
+                                    <h5 class="text-primary">Welcome Back !</h5>
+                                </div>
+                                <div class="p-2 mt-4">
+                                    <form action="/home" method="POST">
+                                        <div class="mb-3">
+                                            <input type="text" name="user" class="form-control" id="user" placeholder="Enter user">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="password" class="form-control" id="password" placeholder="Enter password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="vender_code" class="form-control" id="vender_code" placeholder="Enter vender_code">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="app_key" class="form-control" id="app_key" placeholder="Enter app_key">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="imei" class="form-control" id="imei" placeholder="Enter imei number">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="text" name="token" class="form-control" id="token" placeholder="Enter token id">
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="mb-3">
+                                            <input type="text" name="symbol" class="form-control" id="symbol" placeholder="Enter symbol">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="quentity" class="form-control" id="quentity" placeholder="Enter quentity">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="target" class="form-control" id="target" placeholder="Enter target">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="p_l_profit" class="form-control" id="p_l_profit" placeholder="Enter profit target">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="p_l_loss" class="form-control" id="p_l_loss" placeholder="Enter loss target">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="target1" class="form-control" id="target1" placeholder="Enter target1">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="target2" class="form-control" id="target2" placeholder="Enter target2">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="target3" class="form-control" id="target3" placeholder="Enter target3">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="count_repeat" class="form-control" id="count_repeat" placeholder="Enter count_repeat">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="number" name="starting_point" class="form-control" id="starting_point" placeholder="Enter starting_point">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <input type="submit" name="signin" id="signin" class="form-submit btn btn-success w-100" value="Start Service"/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+
+                    </div>
+                </div>
+
+                </div>
+                <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © Code Scatter.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Design & Develop by Code Scatter
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+{% endblock %}
